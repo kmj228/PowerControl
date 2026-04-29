@@ -27,6 +27,7 @@
 
 - [프로젝트 소개](#프로젝트-소개)
 - [주요 기능](#주요-기능)
+- [기술 스택](#기술-스택)
 - [아키텍처](#아키텍처)
 - [다운로드 및 실행](#다운로드-및-실행)
 - [초기 설정](#초기-설정)
@@ -68,6 +69,32 @@ Node.js 기반으로 빌드된 단독 실행 EXE 파일로 배포되며, 별도 
 
 ---
 
+## 기술 스택
+
+### Backend
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![mysql2](https://img.shields.io/badge/mysql2-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://github.com/sidorares/node-mysql2)
+
+### Frontend
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)]()
+[![JavaScript](https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)]()
+[![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socket.io&logoColor=white)]()
+
+### Database
+[![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)](https://mariadb.org/)
+
+### 통신 프로토콜
+[![TCP](https://img.shields.io/badge/TCP%20Socket-00599C?style=for-the-badge&logo=cisco&logoColor=white)]()
+[![HTTPS](https://img.shields.io/badge/HTTPS-FF6B35?style=for-the-badge&logo=letsencrypt&logoColor=white)]()
+
+### 배포
+[![pkg](https://img.shields.io/badge/pkg%20(EXE%20빌드)-CB3837?style=for-the-badge&logo=npm&logoColor=white)](https://github.com/vercel/pkg)
+[![Windows](https://img.shields.io/badge/Windows-0078D4?style=for-the-badge&logo=windows&logoColor=white)]()
+[![systray2](https://img.shields.io/badge/systray2-444444?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/cinit/systray2)
+
+---
+
 ## 아키텍처
 
 ```
@@ -106,18 +133,20 @@ TCP 포트는 웹 설정 화면에서 변경 가능하다.
 
 ### 파일 구성
 
-[Releases](../../releases) 페이지에서 최신 버전을 다운로드하거나, 이 저장소를 직접 클론한다.
+[Releases](https://github.com/kmj228/PowerControl/releases) 페이지에서 아래 두 파일을 다운로드한다.
 
-```
-PowerControl/
-├── DeviceManager.exe   ← 서버 본체 (Node.js 설치 불필요)
-├── start.vbs           ← ✅ 권장 — CMD 창 없이 백그라운드 실행
-└── start.bat           ← 참고용 — CMD 창과 함께 실행 (로그 확인 시 사용)
-```
+| 파일 | 설명 |
+|------|------|
+| `DeviceManager.exe` | 서버 본체 (Node.js 설치 불필요) |
+| `start.vbs` | ✅ 권장 실행 방법 — CMD 창 없이 백그라운드 실행 |
+
+> `start.bat` 은 CMD 창과 함께 실행되는 디버그용 파일로, 일반 사용 시에는 불필요하다.
+
+두 파일을 **같은 폴더**에 놓는다.
 
 ### 실행
 
-폴더를 원하는 위치에 놓고 **`start.vbs` 를 더블클릭**한다.
+**`start.vbs` 를 더블클릭**한다.
 
 `start.vbs` 로 실행하면 CMD 창 없이 서버가 백그라운드에서 시작되고,
 작업표시줄 오른쪽 **숨겨진 아이콘(∧)** 에 트레이 아이콘이 나타난다.
